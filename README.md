@@ -65,3 +65,8 @@ During the interaction, when Pepper determines that the human in front of him ha
 * verbal reassurance, such as "don't worry", 
 * behavioral comforting： dance to please the patient.
 
+## Dependencies
+  
+* Python 2.7
+* naoqi Python SDK
+
