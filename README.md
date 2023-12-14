@@ -70,3 +70,9 @@ During the interaction, when Pepper determines that the human in front of him ha
 * Python 2.7
 * naoqi Python SDK
 
+## Limitation
+
+Choregraphe can successfully connect to the real pepper, but it doesn't run. Presumably the reason for this is that the pepper doesn't install some packages.
+
+I tried to use Webots to connect Choreographe for generating simulation environment to the extent that Pepper can run in the simulation environment. But after searching, I found that Webots after 2019 no longer support the connection of NAO Robotics Development Kit Choregraphe. Older versions of Webots cannot be found and downloaded from the web.
+
