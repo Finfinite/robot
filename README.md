@@ -77,6 +77,7 @@ During the interaction, when Pepper determines that the human in front of him ha
    self.tts.say("don't wory, let's dance")
    ```
 * behavioral comforting： dance to please the patient.
+
   Here drag and drop Choregraphe's internal behavior box and connect it, click upload to robot and start playing to see the robot start performing continuous actions
 
 ## Dependencies
