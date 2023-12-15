@@ -46,6 +46,15 @@ The module of interaction start with human saying “Hi, pepper”. Then, the ro
 During the interaction, the robot continues to ask about the injury, waiting for the patient's response and taking the corresponding first aid measures.
 
  * hemostasis: grab alcohol pad and bandage and deliver to patient
+   ```
+   self.tts = ALProxy("ALTextToSpeech")
+   self.tts = ALProxy("ALMotion")
+   LeftArm = ["LShoulderPitch", "LShoulderRoll", "LelbowYaw", "LElbowRoll", "LWristYaw"]
+   self.motion.setAngles(LeftArm, [0.0, 0.0, 0.0, 0.0, -0.9], 0.2)
+   self.tts.say("this is hemostasis pad and bandage, please use them to cover the wound")
+   ```
+
+   like this
  * pain: grab aspirin and deliver to patient
  * fracture: grab splint and bandage to immobilize the limb
  * sunstroke: take out cooling ointment and deliver to patient
@@ -62,8 +71,13 @@ The module of interaction start with human saying “Hi, pepper”. Then, the ro
 
 During the interaction, when Pepper determines that the human in front of him has a psychological problem, he will take the appropriate measures to pacify him:     
 
-* verbal reassurance, such as "don't worry", 
+* verbal reassurance, such as "don't worry"
+   ```
+   self.tts = ALProxy("ALTextToSpeech")
+   self.tts.say("don't wory, let's dance")
+   ```
 * behavioral comforting： dance to please the patient.
+  Here drag and drop Choregraphe's internal behavior box and connect it, click upload to robot and start playing to see the robot start performing continuous actions
 
 ## Dependencies
   
