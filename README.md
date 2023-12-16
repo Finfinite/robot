@@ -89,5 +89,4 @@ During the interaction, when Pepper determines that the human in front of him ha
 
 Choregraphe can successfully connect to the real pepper, but it doesn't run. Presumably the reason for this is that the pepper doesn't install some packages.
 
-I tried to use Webots to connect Choreographe for generating simulation environment to the extent that Pepper can run in the simulation environment. But after searching, I found that Webots after 2019 no longer support the connection of NAO Robotics Development Kit Choregraphe. Older versions of Webots cannot be found and downloaded from the web.
-
+I tried to run another software Webots to try to connect to the Choregraphe, which is able to virtualize a real-like environment where the robot can act, such as a room, a soccer field, etc. However, this didn't work either, because the Webots were not installed. However, this also didn't work because Webots 2019 and above versions of NAO don't have naoqisim controllers in them anymore, so they can't connect.
