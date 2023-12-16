@@ -7,5 +7,164 @@
 * fracture: grab splint and bandage to immobilize the limb
 * sunstroke: take out cooling ointment and deliver to patient
 
+```
+class MyClass(GeneratedClass):
+    def __init__(self):
+        GeneratedClass.__init__(self)
+        self.tts = ALProxy('ALTextToSpeech')
+        self.move = ALProxy('ALMotion')
+
+    def onLoad(self):
+        #put initialization code here
+        self.bIsRunning = False
+        self.ids = []
+        self.bIsRunning = False
+        self.ids = []
+        pass
+
+    def onUnload(self):
+        #put clean-up code here
+        pass
+
+    def onInput_onStart(self):
+        #self.onStopped() #activate the output of the box
+        self.bIsRunning = True
+        id = self.move.post.moveTo(1.0, 0, 0)
+        time.sleep(2)
+        self.bIsRunning = True
+        id = self.tts.post.say("what happened")
+        time.sleep(6)
+        self.onInput_onStop()
+        pass
+
+    def onInput_onStop(self):
+        self.onUnload() #it is recommended to reuse the clean-up as the box is stopped
+        self.onStopped() #activate the output of the box
+```
+
+```
+class MyClass(GeneratedClass):
+    def __init__(self):
+        GeneratedClass.__init__(self)
+        self.tts = ALProxy("ALTextToSpeech")
+        self.motion = ALProxy("ALMotion")
 
 
+    def onLoad(self):
+        #put initialization code here
+        pass
+
+    def onUnload(self):
+        #put clean-up code here
+        pass
+
+    def onInput_onStart(self):
+        #self.onStopped() #activate the output of the box
+        self.tts.say("this is alcolhol pad, please tear it apart and wipe the wound for sterilize")
+        LeftArm = ["LShoulderPitch", "LShoulderRoll", "LElbowYaw", "LElbowRoll", "LWristYaw"]
+        self.motion.setAngles(LeftArm, [0.0, 0.0, 0.0, 0.0, -1.0], 0.2)
+        time.sleep(6)
+        self.onInput_onStop()
+        pass
+
+    def onInput_onStop(self):
+        self.onUnload() #it is recommended to reuse the clean-up as the box is stopped
+        self.onStopped() #activate the output of the box
+```
+
+```
+class MyClass(GeneratedClass):
+    def __init__(self):
+        GeneratedClass.__init__(self)
+        self.tts = ALProxy("ALTextToSpeech")
+        self.motion = ALProxy("ALMotion")
+
+
+    def onLoad(self):
+        #put initialization code here
+        pass
+
+    def onUnload(self):
+        #put clean-up code here
+        pass
+
+    def onInput_onStart(self):
+        #self.onStopped() #activate the output of the box
+        self.tts.say("this is hemostasis pad and bandage, please use them to cover the wound")
+        LeftArm = ["LShoulderPitch", "LShoulderRoll", "LElbowYaw", "LElbowRoll", "LWristYaw"]
+        self.motion.setAngles(LeftArm, [0.0, 0.0, 0.0, 0.0, -0.9], 0.2)
+        time.sleep(6)
+        self.onInput_onStop()
+        pass
+
+    def onInput_onStop(self):
+        self.onUnload() #it is recommended to reuse the clean-up as the box is stopped
+        self.onStopped() #activate the output of the box
+```
+
+```
+class MyClass(GeneratedClass):
+    def __init__(self):
+        GeneratedClass.__init__(self)
+        self.tts = ALProxy("ALTextToSpeech")
+        self.motion = ALProxy("ALMotion")
+
+
+    def onLoad(self):
+        #put initialization code here
+        pass
+
+    def onUnload(self):
+        #put clean-up code here
+        pass
+
+    def onInput_onStart(self):
+        #self.onStopped() #activate the output of the box
+        self.tts.say("this is Advil. Take it if you are in pain")
+        RightArm = ["RShoulderPitch", "RShoulderRoll", "RElbowYaw", "RElbowRoll", "RWristYaw"]
+        self.motion.setAngles(RightArm, [0.0, 0.0, 0.0, 0.0, 0.9], 0.2)
+        time.sleep(6)
+        self.onInput_onStop()
+        pass
+
+    def onInput_onStop(self):
+        self.onUnload() #it is recommended to reuse the clean-up as the box is stopped
+        self.onStopped() #activate the output of the box
+```
+
+```
+class MyClass(GeneratedClass):
+    def __init__(self):
+        GeneratedClass.__init__(self)
+        self.tts = ALProxy("ALTextToSpeech")
+        self.motion = ALProxy("ALMotion")
+        self.posture = ALProxy("ALRobotPosture")
+
+    def onLoad(self):
+        #put initialization code here
+        pass
+
+    def onUnload(self):
+        #put clean-up code here
+        pass
+
+    def onInput_onStart(self):
+        #self.onStopped() #activate the output of the box
+        self.posture.goToPosture("StandInit", 0.5)
+        self.motion.setAngles("RShoulderPitch", -1.0, 0.1)
+        self.motion.setAngles("RShoulderRoll", 0.4, 0.1)
+        self.motion.setAngles("RElbowYaw", 0.9, 0.1)
+        self.motion.setAngles("RElbowRoll", 0.9, 0.1)
+        self.motion.setAngles("LShoulderPitch", -1.0, 0.1)
+        self.motion.setAngles("LShoulderRoll", -0.4, 0.1)
+        self.motion.setAngles("LElbowYaw", -0.9, 0.1)
+        self.motion.setAngles("LElbowRoll", -0.9, 0.1)
+        self.posture.goToPosture("StandInit", 0.5)
+        self.tts.say("please rate my survice")
+        self.onInput_onStop()
+        pass
+
+    def onInput_onStop(self):
+        self.onUnload() #it is recommended to reuse the clean-up as the box is stopped
+        self.onStopped() #activate the output of the box
+```
