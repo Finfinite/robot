@@ -2,3 +2,10 @@
 
 # During the interaction, the robot continues to ask about the injury, waiting for the patient's response and taking the corresponding first aid measures.
 
+* hemostasis: grab alcohol pad and bandage and deliver to patient
+* pain: grab aspirin and deliver to patient
+* fracture: grab splint and bandage to immobilize the limb
+* sunstroke: take out cooling ointment and deliver to patient
+
+
+
