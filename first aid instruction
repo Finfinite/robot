@@ -1,0 +1,4 @@
+# The module of interaction start with human saying “Hi, pepper”. Then, the robot will ask permission to approach, the human need to answer YES or NO and the robot will react according to the answer. 
+
+# During the interaction, the robot continues to ask about the injury, waiting for the patient's response and taking the corresponding first aid measures.
+
