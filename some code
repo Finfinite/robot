@@ -1,3 +1,27 @@
 # The module of interaction start with human saying “Hi, pepper”. Then, the robot will ask permission to approach, the human need to answer YES or NO and the robot will react according to the answer. 
  
 # During the interaction, the robot continues to ask about the injury, waiting for the patient's response and taking the corresponding first aid measures.
+
+```
+class MyClass(GeneratedClass):
+    def __init__(self):
+        GeneratedClass.__init__(self)
+        self.tts = ALProxy("ALTextToSpeech")
+
+    def onLoad(self):
+        #put initialization code here
+        pass
+
+    def onUnload(self):
+        #put clean-up code here
+        pass
+
+    def onInput_onStart(self):
+        #self.onStopped() #activate the output of the box
+        self.tts.say("don't worry, let's dance")
+        pass
+
+    def onInput_onStop(self):
+        self.onUnload() #it is recommended to reuse the clean-up as the box is stopped
+        self.onStopped() #activate the output of the box
+```
